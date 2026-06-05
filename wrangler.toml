@@ -1,0 +1,15 @@
+name = "graduation-site"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "out"
+
+[vars]
+R2_PUBLIC_URL = "https://pub-YOUR_BUCKET_ID.r2.dev"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "graduation-db"
+database_id = "REEMPLAZAR_CON_ID_REAL"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "graduation-photos"
