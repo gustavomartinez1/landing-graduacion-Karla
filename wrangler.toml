@@ -8,7 +8,7 @@ R2_PUBLIC_URL = "https://pub-YOUR_BUCKET_ID.r2.dev"
 [[d1_databases]]
 binding = "DB"
 database_name = "graduation-db"
-database_id = "REEMPLAZAR_CON_ID_REAL"
+database_id = "4b224931-5e97-49ad-aee3-73a169382650"
 
 [[r2_buckets]]
 binding = "IMAGES"
