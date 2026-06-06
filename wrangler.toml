@@ -2,9 +2,6 @@ name = "graduation-site"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "out"
 
-[vars]
-R2_PUBLIC_URL = "https://pub-38dd6ed8f1f745bab3a5a9c6d40d0845.r2.dev"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "graduation-db"
