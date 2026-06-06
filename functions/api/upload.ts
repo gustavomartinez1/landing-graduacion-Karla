@@ -37,7 +37,7 @@ export async function onRequest(context) {
     const idBytes = crypto.getRandomValues(new Uint8Array(8));
     const id = Array.from(idBytes).map(b => b.toString(36).padStart(2, "0")).join("").substring(0, 12);
     const now = new Date().toISOString().replace("T", " ").substring(0, 19);
-    const publicUrl = (env.R2_PUBLIC_URL || "https://pub-" + env.IMAGES.name + ".r2.dev") + "/" + r2Key;
+    const publicUrl = "https://pub-38dd6ed8f1f745bab3a5a9c6d40d0845.r2.dev/" + r2Key;
 
     await env.DB.prepare("INSERT INTO graduates (id, name, photo_url, r2_key, created_at) VALUES (?, ?, ?, ?, ?)").bind(id, name, publicUrl, r2Key, now).run();
     await env.DB.prepare("INSERT INTO rate_limits (ip, created_at) VALUES (?, ?)").bind(ip, now).run();
