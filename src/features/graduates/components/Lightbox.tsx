@@ -18,7 +18,7 @@ export default function Lightbox({ name, photoUrl, onClose, onNext, onPrev }: Li
 
   return (
     <AnimatePresence>
-      <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4"
+      <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-[#080d14]/95 backdrop-blur-sm p-4"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose}>
         {onPrev && <button onClick={(e) => { e.stopPropagation(); onPrev(); }}
           className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-[#d4af37] text-4xl z-10 transition-colors">‹</button>}

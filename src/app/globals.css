@@ -1,4 +1,4 @@
 @import "tailwindcss";
 :root { --navy: #0f172a; --navy-mid: #1e293b; --gold: #d4af37; --gold-light: #f0d060; --cream: #fefce8; --white: #ffffff; }
 @theme { --color-navy: #0f172a; --color-navy-mid: #1e293b; --color-gold: #d4af37; --color-gold-light: #f0d060; --color-cream: #fefce8; }
-body { font-family: 'Inter', sans-serif; background-color: #fefce8; color: #1e293b; }
+body { font-family: 'Inter', sans-serif; background-color: #080d14; color: #e2e8f0; }
