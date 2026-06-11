@@ -52,7 +52,7 @@ export default function GalleryGrid({ graduates, isLoading }: GalleryGridProps) 
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: Math.min(i * 0.05, 1) }}
             className="break-inside-avoid">
-            <GraduateCard name={g.name} photoUrl={g.photo_url} onClick={() => setLightboxIndex(i)} />
+            <GraduateCard name={g.name} photoUrl={g.photo_url} number={i + 1} onClick={() => setLightboxIndex(i)} />
           </motion.div>
         ))}
       </div>
