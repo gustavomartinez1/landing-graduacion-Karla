@@ -65,7 +65,7 @@ export default function Lightbox({ name, photoUrl, note, submittedBy, onClose, o
             {/* Submitted by */}
             {submittedBy && (
               <p className="text-gray-400 text-sm mb-4">
-                Subido por <span className="text-white/80">{submittedBy}</span>
+                Uploaded by <span className="text-white/80">{submittedBy}</span>
               </p>
             )}
 
@@ -82,7 +82,7 @@ export default function Lightbox({ name, photoUrl, note, submittedBy, onClose, o
 
             {/* If no note */}
             {!note && (
-              <p className="text-gray-500 text-sm mt-4 italic">Sin nota</p>
+              <p className="text-gray-500 text-sm mt-4 italic">No note</p>
             )}
           </div>
         </motion.div>

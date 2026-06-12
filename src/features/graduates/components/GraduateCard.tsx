@@ -37,7 +37,7 @@ export default function GraduateCard({ name, photoUrl, number, onClick }: Gradua
         {/* Name + CTA */}
         <div className="absolute bottom-0 left-0 right-0 p-4 z-10 transition-all duration-300 group-hover:pb-6">
           <h3 className="font-serif text-white text-lg text-center leading-tight drop-shadow-lg transition-all duration-300 group-hover:text-xl group-hover:text-[#d4af37]">{name}</h3>
-          <p className="text-[#d4af37]/0 text-xs text-center mt-1 transition-all duration-300 group-hover:text-[#d4af37]/70">Ver foto →</p>
+          <p className="text-[#d4af37]/0 text-xs text-center mt-1 transition-all duration-300 group-hover:text-[#d4af37]/70">View photo →</p>
         </div>
       </motion.div>
     </Tilt>

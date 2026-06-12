@@ -21,12 +21,12 @@ function EmptyState({ onUploadClick }: { onUploadClick?: () => void }) {
     <motion.div className="text-center py-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
       <motion.span className="text-8xl block mb-8"
         animate={{ y: [0, -10, 0], rotate: [0, -3, 3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>🎓</motion.span>
-      <h3 className="text-3xl font-serif text-[#d4af37] mb-3">Se el primero de tu generacion</h3>
-      <p className="text-gray-500 text-lg mb-8 max-w-md mx-auto leading-relaxed">Tu foto merece estar aqui. Compartela con todos y se parte de este momento historico.</p>
+      <h3 className="text-3xl font-serif text-[#d4af37] mb-3">Be the first from your class</h3>
+      <p className="text-gray-500 text-lg mb-8 max-w-md mx-auto leading-relaxed">Your photo belongs here. Share it with everyone and be part of this historic moment.</p>
       {onUploadClick && (
         <motion.button onClick={onUploadClick}
           className="px-10 py-4 bg-gradient-to-r from-[#d4af37] to-[#f0d060] text-[#0f172a] font-bold rounded-xl shadow-lg shadow-[#d4af37]/25 hover:shadow-[#d4af37]/50 hover:scale-105 transition-all duration-300"
-          whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>📸 Subir mi foto</motion.button>
+          whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>📸 Upload my photo</motion.button>
       )}
     </motion.div>
   );
@@ -68,7 +68,7 @@ export default function GalleryGrid({ graduates, isLoading, onUploadClick }: Gal
       {letters.length > 1 && (
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           <button onClick={() => setFilterLetter(null)}
-            className={"px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-200 " + (!filterLetter ? "bg-[#d4af37] text-[#0f172a]" : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white")}>Todos</button>
+            className={"px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-200 " + (!filterLetter ? "bg-[#d4af37] text-[#0f172a]" : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white")}>All</button>
           {letters.map(l => (
             <button key={l} onClick={() => setFilterLetter(l)}
               className={"w-9 h-9 rounded-full text-xs font-bold transition-all duration-200 " + (filterLetter === l ? "bg-[#d4af37] text-[#0f172a] scale-110 shadow-lg shadow-[#d4af37]/30" : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white")}>{l}</button>
@@ -76,9 +76,9 @@ export default function GalleryGrid({ graduates, isLoading, onUploadClick }: Gal
         </div>
       )}
       {filtered.length === 0 ? (
-        <p className="text-center text-gray-500 py-10">Ningun graduado empieza con {filterLetter}</p>
+        <p className="text-center text-gray-500 py-10">No graduates start with {filterLetter}</p>
       ) : (
-        <p className="text-center text-gray-600 text-xs mb-6">{filtered.length} graduado{filtered.length !== 1 ? "s" : ""}</p>
+        <p className="text-center text-gray-600 text-xs mb-6">{filtered.length} graduate{filtered.length !== 1 ? "s" : ""}</p>
       )}
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
         <AnimatePresence>

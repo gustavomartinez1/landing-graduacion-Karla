@@ -95,9 +95,9 @@ export default function HeroSection({ graduateCount, onUploadClick }: HeroSectio
       {/* Center content */}
       <div className="relative z-10 text-center max-w-3xl px-4">
         <motion.p className="text-[#d4af37] text-xs md:text-sm tracking-[0.5em] uppercase mb-4"
-          initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>✦ Clase ✦</motion.p>
+          initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>✦ Class ✦</motion.p>
         <motion.h1 className="font-serif text-6xl md:text-8xl text-[#d4af37] mb-6 leading-[1.05]"
-          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>Generacion 2026</motion.h1>
+          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>Class of 2026</motion.h1>
         <motion.div className="flex items-center justify-center gap-3 mb-6 text-[#d4af37]/50"
           initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }} transition={{ delay: 0.6 }}>
           <span className="text-xl">✦</span><span className="block w-20 h-px bg-[#d4af37]/40" />
@@ -105,16 +105,16 @@ export default function HeroSection({ graduateCount, onUploadClick }: HeroSectio
           <span className="text-xl">✦</span>
         </motion.div>
         <motion.p className="text-white/70 text-lg md:text-xl font-light mb-4"
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>Instituto de Estudios Superiores</motion.p>
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>Institute of Higher Education</motion.p>
         <motion.div className="mb-10 space-y-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
           <p className="text-[#f0d060] text-lg font-serif"><motion.span>{count}</motion.span></p>
-          <p className="text-[#f0d060]/60 text-sm">Graduado{graduateCount !== 1 ? "s" : ""}</p>
+          <p className="text-[#f0d060]/60 text-sm">Graduate{graduateCount !== 1 ? "s" : ""}</p>
         </motion.div>
         <motion.div className="relative inline-block"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }}>
           <button onClick={onUploadClick}
             className="relative overflow-hidden inline-flex items-center gap-3 px-10 py-4 bg-[#d4af37] text-[#0f172a] font-bold text-lg rounded-xl hover:bg-[#f0d060] transition-all duration-300 shadow-lg shadow-[#d4af37]/25 hover:shadow-[#d4af37]/50 hover:scale-105 group">
-            <span className="relative z-10">📸 Subir mi foto</span>
+            <span className="relative z-10">📸 Upload my photo</span>
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
               style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)" }} />
           </button>
@@ -125,7 +125,7 @@ export default function HeroSection({ graduateCount, onUploadClick }: HeroSectio
       <motion.button onClick={scrollToGallery}
         className="absolute bottom-8 z-10 flex flex-col items-center gap-2 text-[#d4af37]/50 hover:text-[#d4af37] transition-colors cursor-pointer"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}>
-        <span className="text-[10px] tracking-[0.4em] uppercase">Descubre</span>
+        
         <motion.svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
           animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
           <path d="M6 9l6 6 6-6" />

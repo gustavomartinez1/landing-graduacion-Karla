@@ -13,11 +13,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Generacion 2026 — Galeria de Graduacion",
-  description: "Comparte tu foto de graduacion y se parte de la galeria.",
+  title: "Class of 2026 — Graduation Gallery",
+  description: "Share your graduation photo and be part of the gallery.",
   openGraph: {
-    title: "Generacion 2026 — Galeria de Graduacion",
-    description: "Comparte tu foto de graduacion y se parte de la galeria.",
+    title: "Class of 2026 — Graduation Gallery",
+    description: "Share your graduation photo and be part of the gallery.",
     type: "website",
   },
 };
@@ -34,8 +34,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              "name": "Ceremonia de Graduacion 2026",
-              "description": "Galeria de fotos de graduacion",
+              "name": "Graduation Ceremony 2026",
+              "description": "Graduation photo gallery",
               "eventStatus": "https://schema.org/EventScheduled",
             }),
           }}
