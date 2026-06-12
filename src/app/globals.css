@@ -1,4 +1,49 @@
 @import "tailwindcss";
-:root { --navy: #0f172a; --navy-mid: #1e293b; --gold: #d4af37; --gold-light: #f0d060; --cream: #fefce8; --white: #ffffff; }
-@theme { --color-navy: #0f172a; --color-navy-mid: #1e293b; --color-gold: #d4af37; --color-gold-light: #f0d060; --color-cream: #fefce8; }
-body { font-family: 'Inter', sans-serif; background-color: #080d14; color: #e2e8f0; }
+
+:root {
+  --navy: #0f172a;
+  --navy-mid: #1e293b;
+  --gold: #d4af37;
+  --gold-light: #f0d060;
+  --cream: #fefce8;
+  --white: #ffffff;
+}
+
+@theme {
+  --color-navy: #0f172a; --color-navy-mid: #1e293b; --color-gold: #d4af37;
+  --color-gold-light: #f0d060; --color-cream: #fefce8;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #080d14;
+  color: #e2e8f0;
+}
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridFloat 20s linear infinite;
+}
+@keyframes gridFloat {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+html { scroll-behavior: smooth; }
+.gold-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(45deg, transparent 40%, rgba(212,175,55,0.1) 50%, transparent 60%);
+  transform: rotate(45deg);
+  animation: shineSweep 3s ease-in-out infinite;
+}
+@keyframes shineSweep {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #080d14; }
+::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #f0d060; }
