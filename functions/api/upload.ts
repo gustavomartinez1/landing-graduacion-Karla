@@ -10,6 +10,8 @@ export async function onRequest(context) {
     const formData = await request.formData();
     const file = formData.get("file");
     const name = formData.get("name")?.toString().trim() || "";
+    const submittedBy = formData.get("submitted_by")?.toString().trim() || "";
+    const note = formData.get("note")?.toString().trim() || "";
 
     if (!file || !(file instanceof File)) return new Response(JSON.stringify({ error: "Archivo requerido" }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
     if (file.size > 5 * 1024 * 1024) return new Response(JSON.stringify({ error: "Max 5MB" }), { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } });
@@ -39,7 +41,7 @@ export async function onRequest(context) {
     const now = new Date().toISOString().replace("T", " ").substring(0, 19);
     const publicUrl = "https://pub-38dd6ed8f1f745bab3a5a9c6d40d0845.r2.dev/" + r2Key;
 
-    await env.DB.prepare("INSERT INTO graduates (id, name, photo_url, r2_key, created_at) VALUES (?, ?, ?, ?, ?)").bind(id, name, publicUrl, r2Key, now).run();
+    await env.DB.prepare("INSERT INTO graduates (id, name, photo_url, r2_key, created_at, submitted_by, note) VALUES (?, ?, ?, ?, ?, ?, ?)").bind(id, name, publicUrl, r2Key, now, submittedBy, note).run();
     await env.DB.prepare("INSERT INTO rate_limits (ip, created_at) VALUES (?, ?)").bind(ip, now).run();
 
     return new Response(JSON.stringify({ id, name, photo_url: publicUrl, created_at: now }), {

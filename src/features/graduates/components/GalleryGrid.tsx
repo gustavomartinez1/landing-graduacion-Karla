@@ -74,8 +74,13 @@ export default function GalleryGrid({ graduates, isLoading, onUploadClick }: Gal
         ))}
       </div>
       {lightboxIndex !== null && graduates[lightboxIndex] && (
-        <Lightbox name={graduates[lightboxIndex].name} photoUrl={graduates[lightboxIndex].photo_url}
-          onClose={close} onNext={lightboxIndex < graduates.length - 1 ? goNext : undefined}
+        <Lightbox
+          name={graduates[lightboxIndex].name}
+          photoUrl={graduates[lightboxIndex].photo_url}
+          note={graduates[lightboxIndex].note}
+          submittedBy={graduates[lightboxIndex].submitted_by}
+          onClose={close}
+          onNext={lightboxIndex < graduates.length - 1 ? goNext : undefined}
           onPrev={lightboxIndex > 0 ? goPrev : undefined} />
       )}
     </>
